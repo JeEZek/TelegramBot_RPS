@@ -2,3 +2,4 @@
    1. `venv\Scripts\activate`
 2. Install requirements 
    1. `pip install -r requirements.txt`
+3. Change your token in main
