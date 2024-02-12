@@ -1,6 +1,11 @@
+import os
+import dotenv
+
 from aiogram import Bot, Dispatcher
 
-BOT_TOKEN = 'BOT TOKEN HERE'
+dotenv.load_dotenv()
+
+BOT_TOKEN = os.getenv('BOT_TOKEN')
 
 bot = Bot(BOT_TOKEN)
 dp = Dispatcher()
