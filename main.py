@@ -1,13 +1,12 @@
-import os
-import dotenv
-
 from aiogram import Bot, Dispatcher
+from environs import Env
 
-dotenv.load_dotenv()
+env = Env()
+env.read_env()
 
-BOT_TOKEN = os.getenv('BOT_TOKEN')
+bot_token = env('BOT_TOKEN')
 
-bot = Bot(BOT_TOKEN)
+bot = Bot(bot_token)
 dp = Dispatcher()
 
 if __name__ == '__main__':
